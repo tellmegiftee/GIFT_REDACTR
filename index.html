@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDACTR - Safely share your content</title>
+    
+    <style>
+
+        body  {
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            margin-top: 100px;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: 0%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h6 {
+    text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #080808;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+          }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+
+        button:hover {
+            background-color: #45a049;
+        }
+        h2{
+            text-align: left;
+            color: #0c0c0c;
+            margin-bottom: 0%;
+        }
+        #reset {
+            background-color: #d2d6d2;
+        }
+        h4{
+            text-align: left;
+            color: #080808;
+            margin-bottom: 1%;
+        }
+        h5{
+            text-align: left;
+            color: #080808;
+            margin: 0%;
+        }
+    </style>
+</head>
+<body>
+    <form action="/redact" method="post">
+
+        <h1>REDACTR</h1>
+
+        <h6>.....SCRAMBLE SOME WORDS FROM A BODY OF TEXT CONTENT.</h6>
+
+        <label for="Enter your content:">Enter your content:</label>
+        <br/>
+        <textarea name="Message" id="Message" name="Message" cols="30" rows="1"></textarea>
+
+
+        <label for="Words to be redacted (separated by spaces):">Words to be redacted (separated by spaces):</label>
+        <br/>
+        <textarea name="Message" id="Message" name="Message" cols="30" rows="1"></textarea>
+
+        <div>
+        <label for="replacement">Replacement:</label> <br/>
+        <select name="replacement" id="replacement">
+            <option value="asterisks">Asterisks</option>
+            <option value="questionmarks">Question Marks</option>
+            <option value="dashes">Dashes</option>
+            <option value="underscore">Underscore</option>
+            <option value="customword">Custom Word (e.g Redacted)</option>
+         </select>
+        </div>
+        <br/>
+
+        <button type="submit">Redact Now</button> <br>
+
+        <button type="submit" id="reset">Reset Form</button>
+
+        <h2>Redacted Content</h2>
+        <h4>Status:</h4>
+        <h5>Words scanned: 0, Words redacted: 0, Characters redacted: 0, Time taken: 0 seconds</h5>
+    
+
+    </form>
+
+</body>
+</html>
